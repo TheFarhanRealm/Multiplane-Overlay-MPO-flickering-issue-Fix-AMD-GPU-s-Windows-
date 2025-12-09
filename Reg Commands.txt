@@ -1,0 +1,40 @@
+#Undo Command
+Windows Registry Editor Version 5.00
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+
+
+#initiate Command
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+"OverlayTestMode"=dword:00000005
+
+Ai generated description below 
+
+Windows Registry Editor Version 5.00
+
+; ===================================================
+; AMD GPU Windows MPO Fix
+; ===================================================
+; INSTRUCTIONS:
+; 1) Save this file with a .reg extension (for example: AMD_MPO_Fix.reg)
+; 2) Double-click the file to apply the changes to the registry.
+; 3) Reboot your PC for the changes to take effect.
+; 4) To undo the fix, use the "Undo MPO Workaround" section below.
+;
+; Always create a System Restore point before applying registry edits.
+
+; -----------------------------
+; Enable MPO workaround (DISABLE MPO)
+; -----------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+"OverlayTestMode"=dword:00000005
+
+; -----------------------------
+; Undo MPO workaround (RESTORE DEFAULT)
+; -----------------------------
+; To undo, remove the OverlayTestMode value only:
+;
+; [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Dwm]
+; "OverlayTestMode"=-
